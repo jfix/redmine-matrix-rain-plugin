@@ -1,5 +1,3 @@
-= nyancat plugin
+# Let it Matrix-rain in Redmine-land
 
-Make Nyan Cat enhance your Redmine experience.
-
-Based on https://github.com/jfix/nyancat
+Know the right kombination and rain it will.
