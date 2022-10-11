@@ -10,7 +10,8 @@ const MatrixRain = {};
 
     const endRain = MatrixRain.endRain = (e) => {
         if (c) c.remove();
-        document.documentElement.setAttribute('style', 'overflow:auto');
+        // this might be a bad idea if/when Redmine decides to add a style attribute to the html element
+        document.documentElement.removeAttribute('style');
         document.removeEventListener('keyup', checkEscape);
     }
 
@@ -20,7 +21,7 @@ const MatrixRain = {};
         c = document.createElement('canvas');
         c.setAttribute('id', `mdr-${Math.random()}`);
         c.setAttribute('style', 'position:absolute;top:0px;left:0px;z-index:10000; overflow:hidden;');
-        document.documentElement.setAttribute('style', 'overflow:hidden');
+        document.documentElement.setAttribute('style', 'overflow:hidden !important');
         document.body.appendChild(c);
         //making the canvas full screen
         c.height = document.body.clientHeight;  // document.documentElement.scrollHeight;
