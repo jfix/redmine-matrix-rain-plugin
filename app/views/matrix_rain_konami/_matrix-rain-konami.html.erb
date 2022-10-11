@@ -1,0 +1,5 @@
+<%= javascript_include_tag 'konami', :plugin => 'matrix_rain_konami' %>
+<%= javascript_include_tag 'matrix-rain', :plugin => 'matrix_rain_konami' %>
+<script type="text/javascript">
+document.addEventListener('keyup', Konami.code( function() { MatrixRain.startRain(); }));
+</script>
